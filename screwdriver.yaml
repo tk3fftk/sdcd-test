@@ -8,6 +8,6 @@ jobs:
   A:
     requires: [ ~commit ]
     steps:
-      - get: go get github.com/screwdriver-cd/store-cli; cp $(command -v store-cli) /opt/sd/store-cli
+      - get: go get github.com/screwdriver-cd/store-cli; cp $GOPATH/bin/store-cli /opt/sd/store-cli
       - touch: echo test > "$SD_ARTIFACTS_DIR/this file name includes space (test)"
 
