@@ -1,8 +1,13 @@
 shared:
-  image: node:10
+  image: golang
+  environment:
+    GOPATH: /sd/workspace
 
 jobs:
   A:
     requires: [ ~commit ]
     steps:
+      - rm: rm /opt/sd/store-cli
+      - get: go get github.com/screwdriver-cd/store-cli
       - A: echo test > "$SD_ARTIFACTS_DIR/this file name includes space (test)"
+
