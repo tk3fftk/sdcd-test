@@ -1,0 +1,8 @@
+shared:
+  image: node:10
+
+jobs:
+  A:
+    requires: [ ~commit ]
+    steps:
+      - A: echo test > "$SD_ARTIFACT_DIR/"'!-_.*()&@:,.$=+?; space'
