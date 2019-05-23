@@ -5,4 +5,4 @@ jobs:
   A:
     requires: [ ~commit ]
     steps:
-      - A: echo test > "$SD_ARTIFACTS_DIR/"'!-_.*()&@:,.$=+?; space'
+      - A: echo test > "$SD_ARTIFACTS_DIR/this file name includes space (test)"
