@@ -3,6 +3,8 @@ shared:
   environment:
     GOPATH: /sd/workspace
     GO111MODULE: on
+  secrets:
+    - DOLLAR_TEST
 
 jobs:
   A:
@@ -11,4 +13,5 @@ jobs:
       - get: go get github.com/screwdriver-cd/store-cli; cp $GOPATH/bin/store-cli /opt/sd/store-cli
       - touch: echo test > "$SD_ARTIFACTS_DIR/this file name includes space (test)"
       - touch2: echo test > "$SD_ARTIFACTS_DIR/"'!-_.*()&@:,.$=+; space'
+      - echo: echo "$DOLLAR_TEST"
 
