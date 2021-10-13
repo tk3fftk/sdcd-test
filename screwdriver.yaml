@@ -3,6 +3,6 @@ shared:
 
 jobs:
   A:
-    requires: [ ~commitm ~pr ]
+    requires: [ ~commit, ~pr ]
     steps:
       - echo: echo test
